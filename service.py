@@ -18,7 +18,7 @@ import settings, file, mkvparser, brlog, makemkv
 
 _log = brlog.BrLog('tracker service')
 
-_log.info('Starting the BluRay tracker service') #@UndefinedVariable
+_log.info('Starting the BluRay tracker service') 
 
 class MyPlayer(xbmc.Player):
     def __init__(self):

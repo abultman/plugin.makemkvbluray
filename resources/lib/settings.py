@@ -10,32 +10,26 @@ class BluRaySettings:
   def __init__(self):
     addon = xbmcaddon.Addon(__scriptID__)
     self.log = brlog.BrLog('settings')
-    self.log.info('reading settings') #@UndefinedVariable
+    self.log.info('reading settings') 
 
     params = self.getParams()
+    self.handle = int(sys.argv[1])
     self.paramUrl = self.getParam(params, 'url')
     self.paramName = self.getParam(params, "name")
     self.paramMode = self.getIntParam(params, "mode")
     self.autoPlay = self.getBoolParam(params, "autoplay")
     self.disc = self.getParam(params, "disc")
-    self.local = self.paramMode <> 3
-    self.ipAddress = addon.getSetting('ip_address') #@UndefinedVariable
-    self.portNumber = addon.getSetting('port_number') #@UndefinedVariable
-    if (self.local):
-      #Make sure local means 127.0.0.1 ...
-      self.ipAddress = '127.0.0.1'
-    else :
-      #Remote so use that portnumber
-      self.portNumber = addon.getSetting('remote_port_number') #@UndefinedVariable
+    self.local = True
+    self.portNumber = addon.getSetting('port_number') 
+    self.ipAddress = '127.0.0.1'
 
-    self.mkvLocation = addon.getSetting('mkvlocation') #@UndefinedVariable
+    self.mkvLocation = addon.getSetting('mkvlocation') 
     self.rootURL = 'http://%s:%s/' % (self.ipAddress, self.portNumber)
-    self.waitTimeOut = int(addon.getSetting('wait_timeout')) #@UndefinedVariable
+    self.waitTimeOut = int(addon.getSetting('wait_timeout')) 
     
     # Sections:
-    self.enableDisc = addon.getSetting('support_disc') == "true" #@UndefinedVariable
-    self.enableFile = addon.getSetting('support_fileselect') == "true" #@UndefinedVariable
-    self.enableRemote = addon.getSetting('support_remote') == "true" #@UndefinedVariable
+    self.enableDisc = addon.getSetting('support_disc') == "true" 
+    self.enableFile = addon.getSetting('support_fileselect') == "true" 
 
   def getParam(self, params, name):
     try:
@@ -83,4 +77,4 @@ class BluRaySettings:
         return []
 
   def showSettings(self):
-    xbmcaddon.Addon(__scriptID__).openSettings(sys.argv[ 0 ])  #@UndefinedVariable
+    xbmcaddon.Addon(__scriptID__).openSettings(sys.argv[ 0 ])  
