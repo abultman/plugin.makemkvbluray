@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<setting type="lsep" label="51004"/>
+	<setting id="mkvlocation" type="file" label="50001" default="makemkvcon"/>
+	<setting id="wait_timeout" type="number" label="51003" default="120" />
+	<setting id="port_number" type="number" label="51002" default="51000" />
+
+	<setting type="lsep" label="51005"/>
+	<setting id="support_disc" type="bool" label="51006" default="true" />
+	<setting id="support_fileselect" type="bool" label="51007" default="true"/>
+	<setting id="support_remote" type="bool" label="51008" default="true"/>
+	
+	<setting type="lsep" label="51000" visible="eq(-1,true)"/>
+	<setting id="ip_address" type="ipaddress" label="51001" default="127.0.0.1" visible="eq(-2,true)" />
+	<setting id="remote_port_number" type="number" label="51009" default="51000"  visible="eq(-3,true)" />
+
+</settings>

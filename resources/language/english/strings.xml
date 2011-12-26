@@ -1,0 +1,41 @@
+<strings>
+    <string id="50001">MakeMKV location</string>
+    <string id="50002">Autoplay main feature</string>
+    <string id="51000">Remote Setup</string>
+    <string id="51001">Remote IP address</string>
+    <string id="51002">Local Port number</string>
+    <string id="51003">Seconds to wait for stream</string>
+    <string id="51004">General Settings</string>
+    <string id="51005">Browseable Options</string>
+    <string id="51006">Enable Disc support</string>
+    <string id="51007">Enable File location support</string>
+    <string id="51008">Enable Remote location support</string>
+    <string id="51009">Remote Port number</string>
+    <!-- Chapter browse -->
+    <string id="50005">duration</string>
+    <string id="50006">chapters</string>
+    <!-- Progress Dialog -->
+    <string id="50050">Starting BluRay script</string>
+    <string id="50051">Initializing</string>
+    <string id="50052">Waiting for BluRay to be prepared</string>
+    <string id="50053">Starting Disc</string>
+    <string id="50054">Starting Image</string>
+    <string id="50055">Starting Directory</string>
+    <string id="50056">Waiting for stream</string>
+    
+    <!-- Plugin strings -->
+    <string id="50060">Settings</string>
+    
+    <string id="50061">Play Disc %s: %s</string>
+    <string id="50062">Browse Disc %s: %s</string>
+    <string id="50063">Play Filelocation</string>
+    <string id="50064">Browse Filelocation</string>
+    <string id="50065">Play Remote location</string>
+    <string id="50066">Browse Remote location</string>
+    
+    <!-- Error messages -->
+    <string id="50070">Running MakeMKV ended abnormally. Is it installed?</string>
+    <string id="50071">unable to find autoplay stream</string>
+    <string id="50072">Error trying to open makemkv stream</string>
+    <string id="50073">The file you've selected cannot be accessed by the filesystem</string>
+</strings>
