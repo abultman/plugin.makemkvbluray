@@ -27,7 +27,6 @@ class MyPlayer(xbmc.Player):
     
     def onPlayBackStopped(self):
         _log.info('Playback stopped, trying to kill makemkv')
-        xbmc.executebuiltin('Notification("MakeMkv", "Playback ended, stopping makemkv")')
         self.makemkv.killMkv()
 
     def onPlayBackStarted(self):
