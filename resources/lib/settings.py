@@ -13,7 +13,8 @@ class BluRaySettings:
     self.log.info('reading settings') 
 
     params = self.getParams()
-    self.handle = int(sys.argv[1])
+    if len(sys.argv) >= 2:
+        self.handle = int(sys.argv[1])
     self.paramUrl = self.getParam(params, 'url')
     self.paramName = self.getParam(params, "name")
     self.paramMode = self.getIntParam(params, "mode")
