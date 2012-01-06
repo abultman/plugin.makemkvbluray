@@ -1,10 +1,6 @@
 import xbmc, xbmcgui, subprocess, os, time, sys, urllib, re
 import xbmcplugin, xbmcaddon
 
-# Shared resources
-BASE_RESOURCE_PATH = os.path.join( xbmcaddon.Addon().getAddonInfo('path'), "resources" )
-sys.path.append( os.path.join( BASE_RESOURCE_PATH, "lib" ) )
-
   
 __scriptname__ = "MakeMKV BluRay Watch Plugin"
 __scriptID__      = "plugin.makemkvbluray"
@@ -13,6 +9,10 @@ __url__ = "http://bultsblog.com/arne"
 __credits__ = ""
 __version__ = "0.1"
 __addon__ = xbmcaddon.Addon(__scriptID__)
+
+# Shared resources
+BASE_RESOURCE_PATH = os.path.join( __addon__.getAddonInfo('path'), "resources" )
+sys.path.append( os.path.join( BASE_RESOURCE_PATH, "lib" ) )
 
 __language__ = __addon__.getLocalizedString
 _ = sys.modules[ "__main__" ].__language__
