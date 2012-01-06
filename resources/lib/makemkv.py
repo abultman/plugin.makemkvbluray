@@ -98,4 +98,16 @@ class MakeMkvInteraction:
         self.log.info('Windows call successful') 
       except:
         pass
+    
+    def makeMkvExists(self):
+        (fin, fout) = os.popen4('%s -r' %(self.settings.mkvLocation))
+        result = fout.read()
+        self.log.info('Make mkv check returned %s' % (result.splitlines()[0]))
+        if result.splitlines()[0].startswith('Use: makemkvcon [switches] Command [Parameters]'):
+            self.log.info("MakeMkvCon found!")
+            return True
+        else:
+            self.log.info('MakeMkvcon seems not to be configured properly : %s' %(self.settings.mkvLocation))
+            return False
+        
         

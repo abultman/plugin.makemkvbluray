@@ -35,6 +35,10 @@ class MyPlayer(xbmc.Player):
 
 
 myPlayer = MyPlayer()
+xbmc.sleep(4)
+if not makemkv.MakeMkvInteraction().makeMkvExists():
+    imagePath =  os.path.join(__addon__.getAddonInfo('path'),'resources','images', 'alerticon.png')
+    xbmc.executebuiltin('Notification("MakeMkv", "The MakeMKV bluray plugin cannot find MakeMkv. Please configure the plugin to point to it", "15000", "%s")' % (imagePath))
 
 while (not xbmc.abortRequested):
     xbmc.sleep(4)
